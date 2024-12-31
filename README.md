@@ -21,3 +21,4 @@ These queries can be adapted for datasets containing data such as stock id, time
   5. EXEC stocksp_new 'FLTR'
   6. stocksp_new is the name of the SP and 'FLTR' refers to stock id.
   7. You can execute the above mentioned stored procedure multiple times and check the column percentage_deviation. If the value is greater than zero, it indicates presence of an outlier for that stock.
+  8. You can pass other stock ids, such as NMR or GSK, to the stored procedure to identify any outlier for those stocks as well.
