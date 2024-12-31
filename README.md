@@ -17,3 +17,7 @@ These queries can be adapted for datasets containing data such as stock id, time
   1. Create a database name Stock in Microsoft SQL Server.
   2. Execute the Stock Price Data.sql script in Stock DB.
   3. The executed script includes the schema and data of the provided assesment dataset, along with a stored procedure for identifying outliers.
+  4. Use the syntax to execute the stored procedure.
+  5. EXEC stocksp_new 'FLTR'
+  6. stocksp_new is the name of the SP and 'FLTR' refers to stock id.
+  7. You can execute the above mentioned stored procedure multiple times and check the column percentage_deviation. If the value is greater than zero, it indicates presence of an iutlier for that stock.
