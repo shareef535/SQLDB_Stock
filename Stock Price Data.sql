@@ -737,7 +737,7 @@ BEGIN
                          ELSE 0
                      END AS percentage_deviation
               FROM SelectedRows
-              WHERE ABS(StockPriceValue - moving_avg_30) / moving_avg_30 > 0.05
+              --WHERE ABS(StockPriceValue - moving_avg_30) / moving_avg_30 > 0.05
 			  )
 
           SELECT stockid, 
