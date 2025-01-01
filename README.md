@@ -5,10 +5,13 @@ This Project provides sql queries to:
   1. Select 30 consecutive data points starting from random timestamp in a dataset.
   2. The timestamp is chosen such that it is not within the last 29 data points.
   3. These queries can be adapted for datasets containing data such as stock id, timestamp and stock price value.
-  4. To complete the assessment, I uploaded the sample data into an SQL table for processing. The sample data had some issues, so it needed to be transformed into 
-     the required format. Using SQL queries, I resolved the issues, particularly with the date and time format, and updated the raw data into an organied 
-     structure. 
 
+## Data Transformation and Processing Using SQL
+  1.	Uploaded the sample data into an SQL table for processing to complete the assessment.
+	2.	Identified issues in the sample data that required transformation into the required format.
+	3.	Used SQL queries to address and resolve data issues, with a specific focus on date and time format inconsistencies.
+	4.	Updated the raw data into an organized and structured format after transformation.
+  
 ## Features
   1. Random data selection
   2. Retrives a random starting point from valid range of timestamps.
