@@ -692,19 +692,10 @@ BEGIN
               FROM stock
               WHERE StockId = @stockid),
 
-          MaxRowNums
-          AS (SELECT StockID, 
-                     MAX(Row_Num) AS MaxRowNum
-              FROM Stock_Moving_Avg
-              GROUP BY StockID),
-
-          ValidStartPoints
-          AS (SELECT nr.StockID, 
-                     nr.row_num, 
-                     nr.timestamp
-              FROM Stock_Moving_Avg nr
-                   JOIN MaxRowNums mr ON nr.StockID = mr.StockID
-              WHERE nr.Row_Num <= mr.MaxRowNum - 29),
+          ValidStartPoints 
+	  AS (SELECT stockid, row_num, timestamp
+		     FROM Stock_Moving_Avg
+		     WHERE row_num <= (SELECT MAX(row_num) FROM Stock_Moving_Avg WHERE stockid = @stockid) - 29),
 
           RandomStart
           AS (SELECT TOP 1 StockID, 
@@ -738,7 +729,7 @@ BEGIN
                      END AS percentage_deviation
               FROM SelectedRows
               --WHERE ABS(StockPriceValue - moving_avg_30) / moving_avg_30 > 0.05
-			  )
+	     )
 
           SELECT stockid, 
                  timestamp, 
