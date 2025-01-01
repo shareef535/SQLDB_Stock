@@ -26,3 +26,4 @@ This Project provides sql queries to:
   7. You can execute the above mentioned stored procedure multiple times and check the column percentage_deviation. If the value is greater than zero, it indicates 
      presence of an outlier for that stock.
   8. You can pass other stock ids, such as NMR or GSK, to the stored procedure to identify any outlier for those stocks as well.
+  9. Sometimes the query returns ero records. To address this, we can adjust the percentage deviation in the cript from 5% to 1%.
