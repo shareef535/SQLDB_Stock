@@ -7,10 +7,10 @@ This Project provides sql queries to:
   3. These queries can be adapted for datasets containing data such as stock id, timestamp and stock price value.
 
 ## Data Transformation and Processing Using SQL
-  1.	Uploaded the sample data into an SQL table for processing to complete the assessment.
-	2.	Identified issues in the sample data that required transformation into the required format.
-	3.	Used SQL queries to address and resolve data issues, with a specific focus on date and time format inconsistencies.
-	4.	Updated the raw data into an organized and structured format after transformation.
+  1. Uploaded the sample data into an SQL table for processing to complete the assessment.
+  2. Identified issues in the sample data that required transformation into the required format.
+  3. Used SQL queries to address and resolve data issues, with a specific focus on date and time format inconsistencies.
+  4. Updated the raw data into an organized and structured format after transformation.
   
 ## Features
   1. Random data selection
